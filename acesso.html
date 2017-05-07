@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Lucas Soares">
+		<meta name="description" content="Faça o login para o sistema">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+		<script src="js/jquery-3.1.1.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/acesso.js"></script>
+		<title>Login Sistema NAVE</title>
+	</head>
+	<body>
+		<div class="page-header">
+			<h1 id="tituloNave">NAVE</h1>
+			<p class="lead">Acesso ao sistema de controle do horário</p>
+		</div>
+		<div class="container">
+	      <form class="form-signin">
+	        <h2 class="form-signin-heading">Login</h2>
+	        <label for="inputEmail" class="sr-only">Email</label>
+	        <input id="inputEmail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+	        <label for="inputPassword" class="sr-only">Password</label>
+	        <input id="inputSenha" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+	        <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="button">Sign in</button>
+	      </form>
+		</div>
+		<footer>
+			Desenvolvido por Lucas Soares	
+		</footer>
+	</body>
+</html>

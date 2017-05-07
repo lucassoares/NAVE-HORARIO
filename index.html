@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<meta name="author" content="Lucas Soares">
+		<meta name="description" content="Sistema para gerenciamento do horário do NAVE">
+		<meta name="keywords" content="NAVE, Horario, Tempos, Aulas, Matérias, Professores, Lucas, CEJLL, Grade">
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<title>Horário NAVE</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+		<script src="js/jquery-3.1.1.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/code.js"></script>
+	</head>
+	<body>
+		<div class="page-header">
+			<h1 id="tituloNave">NAVE</h1>
+			<p class="lead">Horário completo</p>
+			<p id="horarioAtualizado">Atualizado em: <span id="dadosHorario">07/05 às 11:51</span></p>
+			<p id="menuSemanal">
+				<span class="menuSemanas" id="btnSegunda">Segunda</span>
+				<span class="menuSemanas" id="btnTerca">Terça</span>
+				<span class="menuSemanas" id="btnQuarta">Quarta</span>
+				<span class="menuSemanas" id="btnQuinta">Quinta</span>
+				<span class="menuSemanas" id="btnSexta">Sexta</span>
+			</p>
+			<br>
+			<span class="menuSemanas" id="exibirTudo">Exibir todos os horários</span>
+			<h3 id="tituloSemana"></h3>
+		</div>
+		<div class="container">
+			<div class="row">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr id="titulosTabela">
+									<th id="tituloHorario"></th>
+									<th class="btnTurmas" id="btn1001">1001</th>
+									<th class="btnTurmas" id="btn1002">1002</th>
+									<th class="btnTurmas" id="btn1003">1003</th>
+									<th class="btnTurmas" id="btn1004">1004</th>
+									<th class="btnTurmas" id="btn2001">2001</th>
+									<th class="btnTurmas" id="btn2002">2002</th>
+									<th class="btnTurmas" id="btn2003">2003</th>
+									<th class="btnTurmas" id="btn2004">2004</th>
+									<th class="btnTurmas" id="btn3001">3001</th>
+									<th class="btnTurmas" id="btn3002">3002</th>
+									<th class="btnTurmas" id="btn3003">3003</th>
+									<th class="btnTurmas" id="btn3004">3004</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr id="primeiraLinha"><th scope="row">07:00 - 07:50</th></tr>
+								<tr class="temposHorario" id="segundaLinha"><th scope="row">07:50 - 08:40</th></tr>
+								<tr class="temposHorario" id="terceiraLinha"><th scope="row">08:40 - 09:30</th></tr>
+								<tr class="temposHorario"><td colspan="13"><strong>INTERVALO 09:30 - 09:50</strong></td></tr>
+								<tr class="temposHorario" id="quartaLinha"><th scope="row">09:50 - 10:40</th></tr>
+								<tr class="temposHorario" id="quintaLinha"><th scope="row">10:40 - 11:30</th></tr>
+								<tr id="almoco1"><td colspan="7"><strong>ALMOÇO 11:30 - 12:30</strong></td></tr>
+								<tr id="almoco2"><th scope="row">12:30 - 13:20</th></tr>
+								<tr class="temposHorario" id="setimaLinha"><th scope="row">13:20 - 14:10</th></tr>
+								<tr class="temposHorario" id="oitavaLinha"><th scope="row">14:10 - 15:00</th></tr>
+								<tr><td colspan="13"><strong>INTERVALO 15:00 - 15:20</strong></td></tr>
+								<tr class="temposHorario" id="nonaLinha"><th scope="row">15:20 - 16:10</th></tr>
+								<tr class="temposHorario" id="decimaLinha"><th scope="row">16:10 - 17:00</th></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>				
+			</div>
+		<footer>
+			Desenvolvido por <a href="http://lucassoares.tk" title="Lucas Soares">Lucas Soares </a>
+			<br>Projeto criado para ajudar todos do colégio
+		</footer>
+	</body>
+</html>

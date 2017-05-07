@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<title>Página de controle</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+		<!-- <script
+		  src="https://code.jquery.com/jquery-3.1.1.js"
+		  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		  crossorigin="anonymous">
+		</script> -->
+		<script src="js/jquery-3.1.1.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/controle.js"></script>
+	</head>
+	<body>
+		<div class="page-header">
+			<h1>Horário do Pessoal do NAVE</h1>
+			<p class="lead">Controle do horário</p>
+			<p>
+				<span class="menuSemanas" id="btnSegunda">Segunda</span>
+				<span class="menuSemanas" id="btnTerca">Terça</span>
+				<span class="menuSemanas" id="btnQuarta">Quarta</span>
+				<span class="menuSemanas" id="btnQuinta">Quinta</span>
+				<span class="menuSemanas" id="btnSexta">Sexta</span>
+			</p>
+			<h3 id="tituloSemana"></h3>
+		</div>
+		<div class="container">
+			<div class="row">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th></th>
+									<th id="btn1001">1001</th>
+									<th>1002</th>
+									<th>1003</th>
+									<th>1004</th>
+									<th>2001</th>
+									<th>2002</th>
+									<th>2003</th>
+									<th>2004</th>
+									<th>3001</th>
+									<th>3002</th>
+									<th>3003</th>
+									<th>3004</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr id="primeiraLinha"><th scope="row">07:00 - 07:50</th></tr>
+								<tr id="segundaLinha"><th scope="row">07:50 - 08:40</th></tr>
+								<tr id="terceiraLinha"><th scope="row">08:40 - 09:30</th></tr>
+								<tr><td colspan="13"><strong>INTERVALO 09:30 - 09:50</strong></td></tr>
+								<tr id="quartaLinha"><th scope="row">09:50 - 10:40</th></tr>
+								<tr id="quintaLinha"><th scope="row">10:40 - 11:30</th></tr>
+								<tr id="almoco1"><td colspan="7"><strong>ALMOÇO 11:30 12:30</strong></td></tr>
+								<tr id="almoco2"><th scope="row">12:30 - 13:20</th></tr>
+								<tr id="setimaLinha"><th scope="row">13:20 - 14:10</th></tr>
+								<tr id="oitavaLinha"><th scope="row">14:10 - 15:00</th></tr>
+								<tr><td colspan="13"><strong>INTERVALO 15:00 - 15:20</strong></td></tr>
+								<tr id="nonaLinha"><th scope="row">15:20 - 16:10</th></tr>
+								<tr id="decimaLinha"><th scope="row">16:10 - 17:00</th></tr>
+							</tbody>
+						</table>
+					</div>
+					<button id="btnAtualizar" type="button" class="btn btn-default">atualizar</button>
+					<button id="btnSair" type="button" class="btn btn-default">sair</button>
+				</div>				
+			</div>
+
+		<footer>
+			Desenvolvido por <a href="http://lucassoares.tk" title="">Lucas Soares</a>
+		</footer>
+	</body>
+</html>
