@@ -78,7 +78,6 @@ $(document).ready(function(){
 	});
 
 	$('#btn2003').click(function(){
-		$('#almoco1, #menuSemanal').hide();
 		sumirHorario2Almoço();
 		for(i = 9; i < 14; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
@@ -86,11 +85,11 @@ $(document).ready(function(){
 		for(i = 2; i < 8; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
+		$("#almoco1 td:nth-child(2)").css('display', '');
 	});
 
 
 	$('#btn2004').click(function(){
-		$('#almoco1, #menuSemanal').hide();
 		sumirHorario2Almoço();
 		for(i = 10; i < 14; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
@@ -98,51 +97,52 @@ $(document).ready(function(){
 		for(i = 2; i < 9; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
+		$("#almoco1 td:nth-child(3)").css('display', '');
 	});
 
 
 	$('#btn3001').click(function(){
 		sumirHorario2Almoço();
-		$('#almoco1, #menuSemanal').hide();
 		for(i = 11; i < 14; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
 		for(i = 2; i < 10; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
+		$("#almoco1 td:nth-child(4)").css('display', '');
 	});
 
 
 	$('#btn3002').click(function(){
 		sumirHorario2Almoço();
-		$('#almoco1, #menuSemanal').hide();
 		for(i = 12; i < 14; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
 		for(i = 2; i < 11; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
+		$("#almoco1 td:nth-child(5)").css('display', '');
 	});
 
 
 	$('#btn3003').click(function(){
 		sumirHorario2Almoço();
-		$('#almoco1, #menuSemanal').hide();
 		for(i = 13; i < 14; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
 		for(i = 2; i < 12; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
+		$("#almoco1 td:nth-child(6)").css('display', '');
 	});
 
 
 	$('#btn3004').click(function(){
 		sumirHorario2Almoço();
-		$('#almoco1, #menuSemanal').hide();
 		for(i = 2; i < 13; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
+		$("#almoco1 td:nth-child(7)").css('display', '');
 	});
 
 
@@ -279,7 +279,11 @@ $(document).ready(function(){
 
 
 	function sumirHorario2Almoço(){
-		$('#almoco2 > th').css('display', 'none');
+		$('#menuSemanal').hide();
+		$('#almoco2 > td, #almoco2 > th').remove();
+		$('#almoco2').append('<td colspan="7"><strong>ALMOÇO 12:20 - 13:20</strong></td>');
+		$('#almoco1 > th').html('11:30 - 12:20');
+		$('#almoco1 > th').attr('colspan', '1');
 	}
 	
 });
