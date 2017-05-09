@@ -191,7 +191,8 @@ $(document).ready(function(){
 			$('#quartaLinha > td').remove();
 			$('#quintaLinha > td').remove();
 			$('#almoco1 > td').remove();
-			$('#almoco1').append('<td colspan="7"><strong>ALMOÇO 11:30 - 12:30</strong></td>');
+			$('#almoco1 > th').remove();
+			$('#almoco1').append('<th colspan="7"><strong>ALMOÇO 11:30 - 12:30</strong></th>');
 			$('#almoco2 > td').remove();
 			$('#setimaLinha > td').remove();
 			$('#oitavaLinha > td').remove();

@@ -71,7 +71,7 @@ tr{
 }
 .table>tbody>tr>td{
 	vertical-align: middle;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 }
 #tituloNave{
 	font-size: 140px;

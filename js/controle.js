@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-	//função para verificar se o usuario esta logado e jogar para outra pagina
 	firebase.auth().onAuthStateChanged(firebaseUser =>{
 		if(firebaseUser){
 			var isAnonymous = firebaseUser.isAnonymous;
@@ -163,6 +162,8 @@ $(document).ready(function(){
 			$('#segundaLinha > td').remove();
 			$('#terceiraLinha > td').remove();
 			$('#quartaLinha > td').remove();
+			$('#almoco1 > td').remove();
+			$('#almoco2 > td').remove();
 			$('#quintaLinha > td').remove();
 			$('#sextaLinha > td').remove();
 			$('#setimaLinha > td').remove();
