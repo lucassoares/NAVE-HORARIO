@@ -10,6 +10,11 @@ A página com o horário geral, conta com um recurso de detecção do dia atual,
 <h3>Intuito</h3>
 Ajudar todos do colégio na visualização e alcance do horário escolar, sendo possível visualizar o mesmo em diversas plataformas, e de qualquer lugar.
 
+<h3>Recursos</h3>
+ - Todos os dias disponíveis
+ - Detecção do dia da semana automáticamente para exibição do horário
+ - Disponível para todas as plataformas
+
 <h3>Avisos</h3>
 Por ainda estar disponível na versão de testes, o projeto pode conter algum tipo de bug ou falha durante sua execução. Todo o projeto ainda passará por um refactoring.
 
