@@ -11,6 +11,7 @@ A página com o horário geral, conta com um recurso de detecção do dia atual,
 Ajudar todos do colégio na visualização e alcance do horário escolar, sendo possível visualizar o mesmo em diversas plataformas, e de qualquer lugar.
 
 <h3>Recursos</h3>
+
  - Todos os dias disponíveis
  
  - Detecção do dia da semana automáticamente para exibição do horário
