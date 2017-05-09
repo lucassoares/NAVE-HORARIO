@@ -12,7 +12,9 @@ Ajudar todos do colégio na visualização e alcance do horário escolar, sendo 
 
 <h3>Recursos</h3>
  - Todos os dias disponíveis
+ 
  - Detecção do dia da semana automáticamente para exibição do horário
+ 
  - Disponível para todas as plataformas
 
 <h3>Avisos</h3>
