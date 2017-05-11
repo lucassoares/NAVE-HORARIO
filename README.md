@@ -27,4 +27,4 @@ Fique à vontade para deixar sua crítica ou sugestão para o projeto, e assim t
 Mande um e-mail para devlucassoares@gmail.com
 
 <h2>Equipe</h2>
-<b>Lucas Soares</b> - Atuou como desenvolvedor fullstack do projeto, realzando configuração e programação de tudo.
+<b>Lucas Soares</b> - Atuou como desenvolvedor fullstack do projeto, realizando configuração e programação de tudo.
