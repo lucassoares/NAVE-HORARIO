@@ -7,6 +7,11 @@ Conta com os 5 dias da semana para visualiação do horário de todas as turmas,
 Também conta com uma página de controle para inserção de dados no banco de dados, acesso possível apenas com credenciais de administrador do sistema.
 A página com o horário geral, conta com um recurso de detecção do dia atual, exibindo a grade correspondente a este dia.
 
+![Index Horario NAVE](https://raw.githubusercontent.com/lucassoares/NAVE-HORARIO/master/index.PNG)
+
+## Visualizando apenas uma turma
+![Horario NAVE](https://raw.githubusercontent.com/lucassoares/NAVE-HORARIO/master/horario.PNG)
+
 <h3>Intuito</h3>
 Ajudar todos do colégio na visualização e alcance do horário escolar, sendo possível visualizar o mesmo em diversas plataformas, e de qualquer lugar.
 
