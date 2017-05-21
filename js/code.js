@@ -24,6 +24,7 @@ $(document).ready(function(){
 
 	$('#btn1001').click(function(){
 		horarioPrimeiroAlmoco();
+		$('#almoco1 > th').remove();
 		for(i = 3; i < 14; i++){
 			$('td:nth-child('+i+'),th:nth-child('+i+')').hide();	
 		}
@@ -181,6 +182,8 @@ $(document).ready(function(){
 	}
 
 	exibirDia(dia);
+	HoraAtualizada();
+	
 
 	$('#tituloHorario').append(tituloHorario);
 
@@ -228,11 +231,14 @@ $(document).ready(function(){
 			break;
 		}
 		exibirDia(dia);
+		HoraAtualizada();
 		$('#tituloHorario').empty().append(tituloHorario);
 	});
 
 	
 	function exibirDia(dia){
+		
+
 		var qtdeTempos = 0;
 		firebase.database().ref().child('horario').child(dia).on('child_added',function(snapshot){
 			qtdeTempos++;
@@ -285,6 +291,15 @@ $(document).ready(function(){
 		$('#almoco2').append('<td colspan="7"><strong>ALMOÇO 12:20 - 13:20</strong></td>');
 		$('#almoco1 > th').html('11:30 - 12:20');
 		$('#almoco1 > th').attr('colspan', '1');
+	}
+
+	function HoraAtualizada(){
+		firebase.database().ref().child('atualizacao').child(dia).on('value',function(snapshot){
+			var horarioAtualizacao = snapshot.child('horario').val();
+			var dataAtualizacao = snapshot.child('data').val();
+			$('#dataAtualizacao').html(dataAtualizacao);
+			$('#horaAtualizacao').html(horarioAtualizacao);
+		});
 	}
 	
 });

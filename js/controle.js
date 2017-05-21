@@ -10,7 +10,6 @@ $(document).ready(function(){
 			$(location).attr('href', 'acesso.html');
 		}
 	});
-
 	var primeiro,segundo,terceiro,quarto,quinto,sexto,setimo,oitavo,nono,decimo;
 	var contador = 0;
 	var dia;
@@ -125,7 +124,6 @@ $(document).ready(function(){
 		// }
 		// conta = novoValor;
 	});      
-
 	var d = new Date();
 	var n = d.getDay();
 
@@ -174,35 +172,26 @@ $(document).ready(function(){
 		switch(id){
 			case 'btnSegunda':
 				dia = 'segunda';
-
-				$('#tituloSemana').empty().append(dia);
-				exibirDados();
 			break;
 
 			case 'btnTerca':
 				dia = 'terca';
-				$('#tituloSemana').empty().append(dia);
-				exibirDados();
 			break;
 
 			case 'btnQuarta':
-			$('#tituloSemana').empty().append(dia);
 				dia = 'quarta';
-				exibirDados();
 			break;
 
 			case 'btnQuinta':
-			$('#tituloSemana').empty().append(dia);
 				dia = 'quinta';
-				exibirDados();
 			break;
 
 			case 'btnSexta':
-			$('#tituloSemana').empty().append(dia);
 				dia = 'sexta';
-				exibirDados();
 			break;
 		}
+		$('#tituloSemana').empty().append(dia);
+		exibirDados();
 	});
 
 	exibirDados();
@@ -254,9 +243,9 @@ $(document).ready(function(){
 	contador = 0;
 	}
 
-	// atualiza o banco de dados
+	// clique no botao para atualizar o banco de dados
 	$('#btnAtualizar').click(function(){
-
+		
 		clickAtualizar('1001');
 		clickAtualizar('1002');
 		clickAtualizar('1003');
@@ -272,7 +261,8 @@ $(document).ready(function(){
 		clickAtualizar('3003');
 		clickAtualizar('3004');
 		ii = 0;
-		alert('concluido');
+		DataAtualizacao();
+		alert('Alterações realizadas com sucesso');
 	});
 
 	function clickAtualizar(turma){
@@ -307,6 +297,31 @@ $(document).ready(function(){
 			oitavo: ot,
 			nono: nn,
 			decimo:d
+		});
+	}
+
+
+	function DataAtualizacao(){
+		var date = new Date();
+		var hora = date.getHours();
+		var minutos = date.getMinutes();
+		var mes = parseInt(date.getMonth()) + 1;
+		if(mes < 10){
+			mes = "0"+mes;
+		}
+		if(minutos < 10){
+			minutos = "0"+minutos;
+		}
+		if(hora < 10){
+			hora = "0"+hora;
+		}
+		if(dia < 10){
+			dia = "0"+dia;
+		}
+		var diaAtualizacao = date.getDate();
+		firebase.database().ref().child ('atualizacao').child(dia).update({
+			data: diaAtualizacao + "/" + mes,
+			horario: hora + ":" + minutos
 		});
 	}
 });

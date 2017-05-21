@@ -1,14 +1,13 @@
 $(document).ready(function(){
 
 	$('#btnLogin').click(function(){
-		var email = $('#inputEmail').val();
-		var senha = $('#inputSenha').val();
+		ValidarAcesso();
+	});
 
-		firebase.auth().signInWithEmailAndPassword(email,senha).then(function(){
-			$(location).attr('href', 'controle.html');
-		}).catch(function(error){
-			alert(error.message);
-		});
+	$('body').on('keydown',function(e){
+		if(e.keyCode === 13){
+			ValidarAcesso();
+		}
 	});
 
 	firebase.auth().onAuthStateChanged(firebaseUser =>{
@@ -18,6 +17,17 @@ $(document).ready(function(){
 		if(firebaseUser && !isAnonymous){
 			$(location).attr('href', 'controle.html');
 		}
-	})
+	});
+
+	function ValidarAcesso(){
+		var email = $('#inputEmail').val();
+		var senha = $('#inputSenha').val();
+
+		firebase.auth().signInWithEmailAndPassword(email,senha).then(function(){
+			$(location).attr('href', 'controle.html');
+		}).catch(function(error){
+			alert(error.message);
+		});
+	}
 	
 });
