@@ -22,6 +22,8 @@ Ajudar todos do colégio na visualização e alcance do horário escolar, sendo 
  - Detecção do dia da semana automáticamente para exibição do horário
  
  - Disponível para todas as plataformas
+ 
+ - Exibição da data de atualização do horário
 
 <h3>Avisos</h3>
 Por ainda estar disponível na versão de testes, o projeto pode conter algum tipo de bug ou falha durante sua execução. Todo o projeto ainda passará por um refactoring.
