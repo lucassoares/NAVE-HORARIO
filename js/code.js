@@ -237,11 +237,13 @@ $(document).ready(function(){
 
 	
 	function exibirDia(dia){
-		
-
+		$('#loadingImg').show();
+	$('#tabelaCompleta').css('display', 'none');
 		var qtdeTempos = 0;
+
 		firebase.database().ref().child('horario').child(dia).on('child_added',function(snapshot){
 			qtdeTempos++;
+			console.log("qtde de tempos " + qtdeTempos);
 			var primeiro = snapshot.child('primeiro').val();
 			var segundo = snapshot.child('segundo').val();
 			var terceiro = snapshot.child('terceiro').val();
@@ -281,6 +283,8 @@ $(document).ready(function(){
 			$('#oitavaLinha').append('<td><span class="HorarioMateria"><strong>'+ oitavo[0] +'</span></strong><br>'+  oitavo[1] +'<br><span class="HorarioSala">'+oitavo[2]+'</span></td>');
 			$('#nonaLinha').append('<td><span class="HorarioMateria"><strong>'+ nono[0] +'</span></strong><br>'+  nono[1] +'<br><span class="HorarioSala">'+nono[2]+'</span></td>');
 			$('#decimaLinha').append('<td><span class="HorarioMateria"><strong>'+ decimo[0] +'</span></strong><br>'+  decimo[1] +'<br><span class="HorarioSala">'+decimo[2]+'</span></td>');
+			$('#loadingImg').hide();
+			$('#tabelaCompleta').css('display', 'table');
 		});
 	}
 
